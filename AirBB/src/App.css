@@ -18,3 +18,24 @@ nav > img {
 padding: 20px 36px;
 max-width: 300px;
 }
+
+hero {
+  text-align: left;
+  font-family: 'Poppins', Courier, monospace;
+}
+
+.hero-img {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 40px;
+}
+
+.experiences-title {
+  font-size: 36px;
+}
+
+.paragraph-text {
+  font-size: 26px;
+}
