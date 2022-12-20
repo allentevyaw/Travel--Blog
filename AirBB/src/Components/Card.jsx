@@ -2,18 +2,18 @@ import person from "../assets/person.png"
 import star from "../assets/star.png"
 
 
-export const Card = () => {
+export const Card = (props) => {
     return (
         <div className="card">
-            <img src={ person } className="card--image" />
+            <img src={props.img} className="card--image" />
             <div className="card--stats">
                 <img src={ star } className="card--star" />
-                <span>5.0</span>
-                <span className="grey">6</span>
-                <span className="grey">USA</span>
+                <span>{props.rating}</span>
+                <span className="grey">{props.reviewCount}</span>
+                <span className="grey">{props.country}</span>
             </div>
-            <p>Life Lessons with Katie Zaferes</p>
-            <p><span className="bold">From $136</span> / person</p>
+            <p>{props.title}</p>
+            <p><span className="bold">{props.price}</span> / person</p>
         </div>
     )
 }
