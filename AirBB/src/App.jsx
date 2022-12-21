@@ -4,23 +4,28 @@ import { Navbar } from './Components/Navbar'
 import { Hero } from './Components/Hero'
 import { Card } from './Components/Card'
 import person from "./assets/person.png"
+import data from './Components/Data'
 
 
 export default function App() {
   const [count, setCount] = useState(0)
 
+  const cardElements = data.map((unit) => {
+    return <Card 
+    img={person}
+    rating={unit.rating} 
+    reviewCount={unit.reviewCount}
+    location={unit.location}
+    title={unit.title}
+    price={unit.price}
+    />
+  })
 
   return (
     <div className="App">
       <Navbar />
       <Hero />
-      <Card 
-        img={person}
-        rating="5.0" 
-        reviewCount={5} 
-        country="USA" 
-        title="Life Lessons with Katie Zaferes" 
-        price={136}/>
+      {cardElements}
     </div>
   )
 }
