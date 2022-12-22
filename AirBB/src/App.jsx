@@ -12,12 +12,14 @@ export default function App() {
 
   const cardElements = data.map((unit) => {
     return <Card 
+    key={unit.id}
     img={person}
     rating={unit.stats.rating} 
     reviewCount={unit.stats.reviewCount}
     location={unit.location}
     title={unit.title}
     price={unit.price}
+    openSpots={unit.openSpots}
     />
   })
 

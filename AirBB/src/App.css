@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: 'Poppins', Courier, monospace;
 }
 
 nav  {
@@ -54,6 +55,7 @@ hero {
   flex:  0 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .card--image {
@@ -70,14 +72,21 @@ hero {
   height: 14px;
 }
 
-section {
-  padding: 10px 10px;
-}
-
 .cards-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   overflow-x: auto;
+
+}
+
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 
 }
