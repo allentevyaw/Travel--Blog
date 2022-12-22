@@ -5,9 +5,9 @@ import star from "../assets/star.png"
 export const Card = (props) => {
 let badgetText
 
-if (props.openSpots === 0) {
+if (props.unit.openSpots === 0) {
     badgetText = "SOLD OUT"
-} else if (props.location === "Online") {
+} else if (props.unit.location === "Online") {
     badgetText = "ONLINE"
 } 
 
@@ -17,12 +17,12 @@ if (props.openSpots === 0) {
             <img src={props.img} className="card--image" />
             <div className="card--stats">
                 <img src={ star } className="card--star" />
-                <span>({props.rating})</span>
-                <span className="grey">{props.reviewCount}</span>
-                <span className="grey">{props.country}</span>
+                <span>({props.unit.stats.rating})</span>
+                <span className="grey">{props.unit.stats.reviewCount}</span>
+                <span className="grey">{props.unit.country}</span>
             </div>
-            <p>{props.title}</p>
-            <p><span className="bold">${props.price}</span> / person</p>
+            <p>{props.unit.title}</p>
+            <p><span className="bold">${props.unit.price}</span> / person</p>
         </div> 
     )
 }
